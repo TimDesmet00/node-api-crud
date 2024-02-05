@@ -20,7 +20,7 @@ const pokemonSchema = new mongoose.Schema(
     },
     types: {
       type: [String],
-      required: true,
+      required: false,
     },
   },
   {
