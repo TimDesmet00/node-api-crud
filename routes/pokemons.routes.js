@@ -1,4 +1,6 @@
 const express = require("express");
+const { set } = require("mongoose");
+const { setPokemons } = require("../controllers/pokemon.controller");
 
 const router = express.Router();
 
@@ -10,9 +12,7 @@ router.get("/:id", (req, res) => {
   res.json({ message: `Pokemon avec l'id ${req.params.id}` });
 });
 
-router.post("/", (req, res) => {
-  res.json({ message: req.body });
-});
+router.post("/", setPokemons);
 
 router.put("/:id", (req, res) => {
   res.json({ message: `Modifier le pokemon avec l'id ${req.params.id}` });
