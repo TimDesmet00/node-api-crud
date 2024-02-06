@@ -19,4 +19,4 @@ router.delete("/:id", deleteUser);
 router.patch("/:id", addPokemonFavorite);
 router.patch("/:id", removePokemonFavorite);
 
-module.exports = userrouter;
+module.exports = router;

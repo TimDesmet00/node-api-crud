@@ -18,10 +18,17 @@ const userSchema = new mongoose.Schema(
     biography: {
       type: String,
       required: false,
+      default: "Aucune biographie",
     },
     picture: {
       type: String,
       required: false,
+      default: "pas d'image",
+    },
+    token: {
+      type: String,
+      required: false,
+      default: "",
     },
     pokemonFavorite: [
       {
@@ -35,3 +42,5 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+module.exports = mongoose.model("User", userSchema);

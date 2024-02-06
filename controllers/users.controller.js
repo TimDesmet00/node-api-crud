@@ -1,4 +1,4 @@
-const UserModel = require("../models/user.model");
+const UserModel = require("../models/users.model");
 
 module.exports.getUsers = async (req, res) => {
   const users = await UserModel.find();
@@ -13,7 +13,9 @@ module.exports.getUser = async (req, res) => {
 module.exports.setUsers = async (req, res) => {
   if (!req.body.username || !req.body.email || !req.body.password) {
     res.status(400).send({
-      message: "Merci de renseigner les champs: username, email et password",
+      message:
+        "Merci de renseigner les champs: username, email et password" +
+        req.body.username,
     });
     return;
   }
@@ -24,6 +26,7 @@ module.exports.setUsers = async (req, res) => {
     password: req.body.password,
     biography: req.body.biography,
     picture: req.body.picture,
+    token: req.body.token,
     pokemonFavorite: req.body.pokemonFavorite,
   });
   res.status(200).json({ user });
