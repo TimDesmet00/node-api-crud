@@ -1,5 +1,4 @@
 const express = require("express");
-const { set } = require("mongoose");
 const {
   setPokemons,
   editPokemon,

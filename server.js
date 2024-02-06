@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/pokemons", require("./routes/pokemons.routes"));
+app.use("/users", require("./routes/users.routes"));
 
 app.listen(port, () => {
   console.log(`Le server est démarré sur le port: ${port}`);
