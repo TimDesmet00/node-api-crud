@@ -63,14 +63,14 @@ module.exports.deleteUser = async (req, res) => {
 module.exports.addPokemonFavorite = async (req, res) => {
   try {
     const FavoritePokemon = await UserModel.findByIdAndUpdate(
-      req.params.id,
-      { $push: { pokemonFavorite: req.body.pokemonId } },
+        req.params.id,
+        { $addToSet: { pokemonFavorite: req.body.pokemonId } },
       { new: true }
     );
     res.status(200).send({ FavoritePokemon });
   } catch (error) {
     console.log(error);
-    res.status(400).send({ message: "Erreur lors de l'ajout du pokemon" });
+    res.status(400).json(error);
   }
 };
 
@@ -81,11 +81,9 @@ module.exports.removePokemonFavorite = async (req, res) => {
       { $pull: { pokemonFavorite: req.body.pokemonId } },
       { new: true }
     );
-    res.status(200).send({ FavoritePokemon });
+    res.status(200).json({ FavoritePokemon });
   } catch (error) {
     console.log(error);
-    res
-      .status(400)
-      .send({ message: "Erreur lors de la suppression du pokemon" });
+    res.status(400).json(error);
   }
 };

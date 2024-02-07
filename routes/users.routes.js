@@ -16,7 +16,7 @@ router.get("/:id", getUser);
 router.post("/", setUsers);
 router.put("/:id", editUser);
 router.delete("/:id", deleteUser);
-router.patch("/:id", addPokemonFavorite);
-router.patch("/:id", removePokemonFavorite);
+router.patch("/add-favorite/:id", addPokemonFavorite);
+router.patch("/remove-favorite/:id", removePokemonFavorite);
 
 module.exports = router;
