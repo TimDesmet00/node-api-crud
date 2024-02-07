@@ -15,12 +15,6 @@ const verifyToken = (token) => {
     }
 }
 
-module.exports.signup = async (req, res) => {
-    const userId = 'id_de_l_utilisateur';
-    const token = generateToken(userId);
-    res.json({ token });
-}
-
 module.exports.login = async (req, res) => {
     const userId = 'id_de_l_utilisateur';
     const token = generateToken(userId);
