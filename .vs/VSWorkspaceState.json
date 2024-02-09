@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\config",
     "\\controllers",
     "\\models",
     "\\routes"
   ],
-  "SelectedNode": "\\routes\\pokemons.routes.js",
   "PreviewInSolutionExplorer": false
 }

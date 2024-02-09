@@ -1,5 +1,5 @@
 # node-api-crud
-exercice dans le cadre de ma formation [Becode](https://becode.org) pour m'entrainer a faire une API en Node.js, express, mongoose et mongoDB
+exercice dans le cadre de ma formation [Becode](https://becode.org) pour m'entrainer a faire une API en Node.js, express, mongoose et mongoDB.
 
 ## Description
 
@@ -15,7 +15,7 @@ L'objectif de cet exercice est de créer une API RESTful qui permettra de manipul
 
 ## Tech Stack
 
-Javascript, node.js, express, mongoose, mongoDB
+Javascript, node.js, express, mongoose, mongoDB.
 
 ## route
 
